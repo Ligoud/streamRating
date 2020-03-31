@@ -1,0 +1,125 @@
+html{
+    overflow: hidden;
+    background-color: #ffffff;
+    cursor: url('smorc.png'),auto;
+}
+
+#bg{
+    padding: 10px;
+    cursor: inherit;
+}
+#ticketlist{
+    max-height: 400px;
+    min-height: 400px;
+    min-width: 300px;
+    padding-right: 20px; /* Убираю скролл за границы(почему-то ниже не работает)*/
+
+    overflow-y: scroll;
+    overflow-x:hidden ;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    
+
+    cursor: inherit;
+}
+#ticketilist::-webkit-scrollbar{
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.ticket{
+    position: relative;
+    font-family: 'Pangolin', cursive;
+    font-size: 18px;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 5px;
+    
+    padding: 5px;
+    min-height: 50px;
+
+    margin-top: 12px;
+
+    cursor: inherit;
+}
+.ticket:before{
+    position: absolute;
+    content: attr(data-name);
+    background-color: white;
+    overflow: hidden;
+    max-width: 150px;
+    top: -10px;
+    left: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    color: #6441A4;
+    z-index: 1;
+}
+.ticket span{
+    position: relative;
+    word-wrap: break-word;
+    z-index: 2;
+}
+
+#ticketlist:first-child{
+    margin-top: -10px;
+}
+
+#inputfield{
+    display: flex;
+    justify-content: space-between;
+    cursor: inherit;
+}
+
+#txtarea{
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin-right: 10px;
+    padding: 2px;
+    height: 40px;
+    width: 80%;
+    resize: none;    
+    border-color: black;
+    border-radius: 5px;
+    cursor: inherit;
+}
+#txtarea:focus{
+    outline: none;
+    box-shadow: 0 0 2px #6441A4;
+}
+
+.btn{
+    font-family: 'Russo One', sans-serif;
+    height: 42px;
+    width: 42px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 42px;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 10px;
+    color: #6441A4;
+    transition: 0.2s;
+    cursor: inherit;
+}
+.btn:hover{
+    border-color: #6441A4;
+    box-shadow: 0 0 10px #6441A4;
+    color: rgb(85, 85, 85);
+}
+
+.loggedin{
+    display: none;
+    margin-top: 20px;
+    width: 100%;
+}
+.loggedout{
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+.loggedout span{
+    font-family: 'Russo One', sans-serif;
+    color: #6441A4;
+}
+
+hr{
+    margin-bottom: 0;
+    padding:0;
+}

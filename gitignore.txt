@@ -1,0 +1,8 @@
+Я ВКУРСЕ ес чо
+---
+config.html
+panel.html
+smorc.png
+streamrating.zip
+styles.css
+viewer.js
